@@ -1,0 +1,30 @@
+apply plugin: "java"
+apply plugin: "war"
+apply plugin: "org.springframework.boot"
+
+group "com.estudosspring"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+wrapper {
+    gradleVersion = "4.3.1"
+} 
+
+buildscript {
+    repositories {
+       mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")    
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE")
+}
+
